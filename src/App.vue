@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+
+  <!-- <Home data="bharti rathod" msg="hii bharti is hear" />
+  <Condition />
+  <Loops /> -->
+  <Parent />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import Home from "./components/Home.vue";
+// import Condition from "./components/Condition.vue";
+// import Loops from "./components/Loops.vue";
+import Parent from './components/Parent.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // HelloWorld,
+    // Home,
+    // Condition,
+    // Loops,
+    Parent
+  },
+};
 </script>
 
 <style>
