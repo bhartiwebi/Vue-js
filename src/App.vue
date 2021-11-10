@@ -1,17 +1,28 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <!-- 
+  <div id="app">
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <!-- 
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
-  <Home data="bharti rathod" msg="hii bharti is hear" />
-  <Condition />
-  <Loops />
-  <Parent />
-  <Display />
-  <!-- <Child name="Arya Rathod" /> -->
-  <Child v-bind:users="users" />
-  <Checkbox />
-  <Login />
+    <Home data="bharti rathod" msg="hii bharti is hear" />
+    <Condition />
+    <Loops />
+    <Parent />
+    <Display />
+    <!-- <Child name="Arya Rathod" /> -->
+    <Child v-bind:users="users" />
+    <Checkbox />
+    <Login />
+
+    <Filter />
+    <Cycle />
+
+    <div v-if="display">
+      <Cyclee />
+    </div>
+    <button v-on:click="toggle">toggle</button>
+    <!-- <EmployeeList /> -->
+  </div>
 </template>
 
 <script>
@@ -23,6 +34,10 @@ import Display from "./components/Display.vue";
 import Child from "./components/Child.vue";
 import Checkbox from "./components/Checkbox.vue";
 import Login from "./components/Login.vue";
+import Filter from "./components/Filter.vue";
+import Cycle from "./components/Cycle.vue";
+import Cyclee from "./components/Cyclee.vue";
+// import EmployeeList from './components/EmployeeList.vue';
 // import Parent from './components/Parent.vue';
 
 export default {
@@ -36,7 +51,21 @@ export default {
     Display,
     Child,
     Login,
+    Filter,
+    Cycle,
+    Cyclee,
+
     // Parent
+  },
+  dt() {
+    return {
+      display: true,
+    };
+  },
+  methods: {
+    toggle() {
+      this.display = !this.display;
+    },
   },
 
   data() {
