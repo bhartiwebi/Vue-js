@@ -3,14 +3,14 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <!-- 
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-
-    <Home data="bharti rathod" msg="hii bharti is hear" />
+    <EmployeeList />
+    <!-- <Home data="bharti rathod" msg="hii bharti is hear" />
     <Condition />
     <Loops />
     <Parent />
-    <Display />
+    <Display /> -->
     <!-- <Child name="Arya Rathod" /> -->
-    <Child v-bind:users="users" />
+    <!-- <Child v-bind:users="users" />
     <Checkbox />
     <Login />
 
@@ -20,23 +20,25 @@
     <div v-if="display">
       <Cyclee />
     </div>
-    <button v-on:click="toggle">toggle</button>
+    <button v-on:click="toggle">toggle</button> -->
     <!-- <EmployeeList /> -->
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Home from "./components/Home.vue";
-import Condition from "./components/Condition.vue";
-import Loops from "./components/Loops.vue";
-import Display from "./components/Display.vue";
-import Child from "./components/Child.vue";
-import Checkbox from "./components/Checkbox.vue";
-import Login from "./components/Login.vue";
-import Filter from "./components/Filter.vue";
-import Cycle from "./components/Cycle.vue";
-import Cyclee from "./components/Cyclee.vue";
+// import Home from "./components/Home.vue";
+// import Condition from "./components/Condition.vue";
+// import Loops from "./components/Loops.vue";
+// import Display from "./components/Display.vue";
+// import Child from "./components/Child.vue";
+// import Checkbox from "./components/Checkbox.vue";
+// import Login from "./components/Login.vue";
+// import Filter from "./components/Filter.vue";
+// import Cycle from "./components/Cycle.vue";
+// import Cyclee from "./components/Cyclee.vue";
+import EmployeeList from "./components/EmployeeList.vue";
+
 // import EmployeeList from './components/EmployeeList.vue';
 // import Parent from './components/Parent.vue';
 
@@ -44,16 +46,17 @@ export default {
   name: "App",
   components: {
     // HelloWorld,
-    Checkbox,
-    Home,
-    Condition,
-    Loops,
-    Display,
-    Child,
-    Login,
-    Filter,
-    Cycle,
-    Cyclee,
+    // Checkbox,
+    // Home,
+    // Condition,
+    // Loops,
+    // Display,
+    // Child,
+    // Login,
+    // Filter,
+    // Cycle,
+    // Cyclee,
+    EmployeeList,
 
     // Parent
   },
@@ -80,7 +83,9 @@ export default {
 };
 </script>
 
-<style>
+<style >
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
