@@ -1,26 +1,34 @@
 <template>
   <div>
-    <h2>Employee List</h2>
-    <form @submit.prevent="submitData" method="post">
-      <input
-        type="text"
-        name="title"
-        placeholder="enter title"
-        v-model="post.title"
-      />
-      <br /><br />
-      <input
-        type="text"
-        name="body"
-        placeholder="enter body"
-        v-model="post.body"
-      /><br /><br />
-      <button type="submit">add</button>
-    </form>
-
+    <div>
+      <h2 class="mb-3">Employee List</h2>
+      <form @submit.prevent="submitData" method="post">
+        <div class="container lg: max-width: 1024px;">
+          <input
+            type="text"
+            name="title"
+            placeholder="enter title"
+            v-model="post.title"
+            required
+          />
+        </div>
+        <br />
+        <div class="container lg: max-width: 1024px;">
+          <input
+            type="text"
+            name="body"
+            placeholder="enter body"
+            v-model="post.body"
+            required
+          />
+        </div>
+        <br /><br />
+        <button type="submit">add</button>
+      </form>
+    </div>
     <div>
       <br />
-      <table border="2px">
+      <table class="flex inline-table">
         <tr>
           <td>ID</td>
           <td>Title</td>
@@ -70,16 +78,22 @@ export default {
       if (this.post.isEditing) {
         alert("update successfully");
         const item = this.post.item;
-        
+
         axios
           .put("http://localhost:3000/posts/" + item.id, this.post)
           .then((res) => {
             console.log("res", res);
           });
       } else {
-        axios.post("http://localhost:3000/posts", this.post).then((res) => {
+        console.log("-this.post----", this.post);
+        const payload = {
+          title: this.post.title,
+          body: this.post.body,
+          // isEditing : this.post.isEditing,
+          item: this.post.item,
+        };
+        axios.post("http://localhost:3000/posts", payload).then((res) => {
           console.log("res", res);
-           
         });
       }
       this.refreshList();

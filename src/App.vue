@@ -1,9 +1,21 @@
 <template>
   <div id="app">
+    <div>
+    <router-link to="/Home">Home</router-link>&nbsp;&nbsp;
+     <router-link to="/EmployeeList">EmployeeList</router-link> &nbsp;
+     <router-link to="Checkbox">CheckBox</router-link>&nbsp;
+     <router-link to="Parent">ParentComponent</router-link>&nbsp;
+     <router-link to="Condition">Conditions</router-link>
+    </div>
+        <router-view> </router-view>
+   
+  <!-- <router-view></router-view> -->
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <!-- 
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <EmployeeList />
+    <!-- <EmployeeList /> -->
+    <!-- <Home data="bharti rathod" msg="hii bharti is hear" /> -->
+      <!-- <Checkbox />  -->
     <!-- <Home data="bharti rathod" msg="hii bharti is hear" />
     <Condition />
     <Loops />
@@ -11,7 +23,7 @@
     <Display /> -->
     <!-- <Child name="Arya Rathod" /> -->
     <!-- <Child v-bind:users="users" />
-    <Checkbox />
+    <Checkbox /> 
     <Login />
 
     <Filter />
@@ -22,6 +34,7 @@
     </div>
     <button v-on:click="toggle">toggle</button> -->
     <!-- <EmployeeList /> -->
+
   </div>
 </template>
 
@@ -37,7 +50,8 @@
 // import Filter from "./components/Filter.vue";
 // import Cycle from "./components/Cycle.vue";
 // import Cyclee from "./components/Cyclee.vue";
-import EmployeeList from "./components/EmployeeList.vue";
+// import EmployeeList from "./components/EmployeeList.vue";
+
 
 // import EmployeeList from './components/EmployeeList.vue';
 // import Parent from './components/Parent.vue';
@@ -56,7 +70,7 @@ export default {
     // Filter,
     // Cycle,
     // Cyclee,
-    EmployeeList,
+    // EmployeeList,
 
     // Parent
   },
@@ -93,5 +107,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+      /* background-color: rgb(123, 204, 207);
+    height: 40px; */
 }
 </style>
